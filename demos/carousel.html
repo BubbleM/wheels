@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播插件</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding:0;
+			list-style-type: none;
+		}
+		#carousel {
+			width: 100%;
+			height: 520px;
+			/*background-color: pink;*/
+			position: relative;
+		}
+		#carousel ul {
+			width: 400%;
+			position: absolute;
+			left: 0;
+			top:0;
+		}
+		#carousel ul li {
+			/*width: 100%;*/
+			height: 520px;
+			background: url(../lib/image/1.jpeg)no-repeat center;
+			float: left;
+		}
+		#carousel ul li:nth-child(2) {
+			background-image: url(../lib/image/2.png);
+		}
+		#carousel ul li:nth-child(3) {
+			background-image: url(../lib/image/3.jpeg);
+		}
+		#carousel ul li:nth-child(4) {
+			background-image: url(../lib/image/4.png);
+		}
+
+		#carousel ol {
+			width: 88px;
+			height: 22px;
+			background: rgba(0,0,0,7);
+			position: absolute;
+			bottom: 18px;
+			left: 50%;
+			margin-left: -64px;
+			padding: 0 20px;
+			border-radius: 11px;
+		}
+		#carousel ol li {
+			width: 12px;
+			height: 12px;
+			background:rgba(255,255,255,.7);
+			float: left;
+			border-radius: 50%;
+			margin:5px;
+			cursor: pointer;
+			list-style-type: none;
+		}
+		#carousel ol .current {
+			background: rgba(255,255,255,1);
+		}
+
+		#carousel span {
+			width: 60px;
+			height: 60px;
+			background: pink;
+			position: absolute;
+			top:50%;
+			/*margin-top: -30%;*/
+			cursor: pointer;
+		}
+		#carousel .left {
+			left: 100px;
+			background: url(../lib/image/left1.png)no-repeat top;
+		}
+		#carousel .right {
+			right: 100px;
+			background: url(../lib/image/right1.png)no-repeat top;
+		}
+	</style>
+</head>
+<body>
+	<div id="carousel">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ol>
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<span class="left"></span>
+		<span class="right"></span>
+	</div>
+	<script src="../lib/jquery-3.1.0.min.js"></script>
+	<script src="../lib/carousel.js"></script>
+</body>
+</html>
